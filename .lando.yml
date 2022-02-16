@@ -1,0 +1,15 @@
+name: AlisQI assignment
+
+services:
+  appserver:
+    type: php:7.4
+    composer_version: 2-latest
+    via: cli
+    build:
+      composer install
+
+tooling:
+  calculate:
+    service: appserver
+    description: Run calculations
+    cmd: php calculator.php
