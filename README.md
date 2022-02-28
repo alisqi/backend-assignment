@@ -1,9 +1,9 @@
 # Context
 [AlisQI's expression engine](https://help.alisqi.com/article/370-advanced-calculations) allows users to configure
-calculated form fields. For example, the following expression calculates the sum of two other fields' values: `a + b`.
+calculated form fields. For example, the following expression calculates the sum of two fields' values: `a + b`.
 
-The expression engine is powered by [Twig](https://twig.symfony.com/). Basically, AlisQI wraps the user's expression
-in a simple Twig template, which is rendered with the other form field values provided as context:
+The expression engine is powered by [Twig](https://twig.symfony.com/). AlisQI wraps the user's expression
+in a barebones Twig template, which is then rendered with the form field values provided as context:
 
 ```php
 $twig->render(
