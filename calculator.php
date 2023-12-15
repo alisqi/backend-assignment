@@ -30,12 +30,16 @@ $test = static function (string $expression, string $expected) use ($twig): bool
 };
 
 $test('a',                  '1000');
+$test('+a',                 '1000');
 $test('a + b',              '1337');
 
 $test('c',                  '');
+$test('"#{c}"',             '');
 $test('+c',                 '');
+$test('+c is null',         '1');
 $test('a + c',              '');
 $test('a + (b - b)',        '1000');
+$test('a / 2 + b',          '837');
 
 $test('a ? b : c',          '337');
 $test('a + (c ?? b)',       '1337');
