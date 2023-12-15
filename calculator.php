@@ -13,7 +13,7 @@ $twig = new Twig\Environment(
 
 
 
-$test = static function (string $expression, string $expected) use ($twig): string {
+$test = static function (string $expression, string $expected) use ($twig): bool {
     $twig->getLoader()->setTemplate($expression, "{{ $expression }}");
     
     $actual = $twig->render($expression, [

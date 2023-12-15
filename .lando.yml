@@ -2,11 +2,11 @@ name: AlisQI assignment
 
 services:
   appserver:
-    type: php:7.4
+    type: php:8.2
     composer_version: 2-latest
     via: cli
     build:
-      composer install
+      - composer install
 
 tooling:
   calculate:

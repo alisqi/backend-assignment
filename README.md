@@ -40,10 +40,10 @@ May the force be with you!
 For bonus points, make the sandbox do the same trick for subtraction, multiplication and division.
 
 # How to run
-You may use any PHP runtime you want and run `php calculator.php`. Don't forget to `composer install`.
+You may use any PHP runtime you want and run `php calculator.php`. Don't forget to `composer install` first.
 
 Alternatively, you can use the [Lando](https://docs.lando.dev/) config (in `.lando.yml`)
-to spin up a PHP 7.4 container with composer installed and `composer install` already done.
+to spin up a PHP 8.2 container that's ready to go.
 
 ```shell
 lando start      # to start the container
