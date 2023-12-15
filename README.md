@@ -17,12 +17,12 @@ Consider what happens if the form field for `b` *has no value* (i.e., the user l
 
 Internally, this leads to `$b = null` (not `$b = ''`).
 
-Twig will compile the *template* `{{ a + b }}` to *PHP code* which boils down to
+Twig will compile the template `{{ a + b }}` to PHP code which boils down to
 ```php
 return $a + $b;
 ```
 
-However, `$a + null === $a` for *any* `int|float $b`, since `null` is cast to `0`:
+However, `$a + null === $a` for *any* `int|float $a`, since `null` is cast to `0`:
 ```php
 var_export(1337 + null);  // outputs '1337'
 var_export(+null);        // outputs '0'
@@ -32,7 +32,8 @@ var_export(+null);        // outputs '0'
 Your assignment is to change the Twig sandbox in such a way `a + b` evaluates to an empty string if either `a` or `b`
 is empty (`null`).
 
-The script `calculator.php` should produce no output when run (see "How to run" below).
+The script `calculator.php` runs a suite of tests and outputs the failing ones (see "How to run" below).
+Therefore, it should produce no output with a valid solution in place.
 
 May the force be with you!
 
@@ -50,7 +51,7 @@ lando start      # to start the container
 lando calculate  # to run `php calculator.php` inside the container
 ```
 
-# How to hand in assignment
+# How to hand in your solution
 Don't publish your code to a public repo and/or send a pull request. Your solution needs to remain private!
 
 You can either send us the code over email or invite this repo's owner to your cloned repo.
